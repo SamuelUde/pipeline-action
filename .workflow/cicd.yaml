@@ -72,7 +72,7 @@
 
 
 
-name: Destroy VPCs on Push
+name: Import-Move-to-S3-Destroy-VPCs-on-Push
 
 on:
   push:
