@@ -1,0 +1,26 @@
+# define pipeline name
+name: Deploy To Server
+
+# define trigger
+on:
+  push:
+    branches: 
+      - main
+
+# define the body/workflows
+jobs:
+  deploy-to-server:
+    name: Deploy To Server
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Run Command 1
+      run: ls -l
+
+    - name: Run Command 2
+      run: |
+        hostnamectl
+        sudo -l
