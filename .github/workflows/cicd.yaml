@@ -56,16 +56,16 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1  # Change to your region
 
-    - name: Initialize Terraform
-      run: terraform init
+    # - name: Initialize Terraform
+    #   run: terraform init
 
-    - name: Validate Terraform config
-      run: terraform validate
+    # - name: Validate Terraform config
+    #   run: terraform validate
 
-    - name: Plan Terraform
-      run: terraform plan -out=tfplan
+    # - name: Plan Terraform
+    #   run: terraform plan -out=tfplan
 
-    - name: Apply Terraform
-      run: terraform apply -auto-approve tfplan
+    # - name: Apply Terraform
+    #   run: terraform apply -auto-approve tfplan
     - name: Destroy Terraform
       run: terraform destroy --auto-approve
