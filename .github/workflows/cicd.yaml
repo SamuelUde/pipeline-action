@@ -115,7 +115,7 @@ jobs:
         EOF
 
     - name: Init without backend
-      run: terraform init -backend=false
+      run: terraform init #-backend=false
 
     - name: Import VPCs
       run: |
