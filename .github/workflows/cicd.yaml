@@ -100,10 +100,7 @@ jobs:
     - name: Create Terraform config
       run: |
         cat <<EOF > main.tf
-        provider "aws" {
-          region = "${{ secrets.AWS_REGION }}"
-        }
-
+ 
         resource "aws_vpc" "vpc1" {}
         resource "aws_vpc" "vpc2" {}
 
